@@ -34,7 +34,7 @@ public class Artigo {
 
         driver.get(url); // Abrir o Site
         driver.findElement(By.id("searchInput")).sendKeys("Ovo de Páscoa"); // Pesquisar por Ovos de Pascoa
-        driver.findElement(By.id("searchButton")).click(); // Clica na Lupa
+        driver.findElement(By.cssSelector("button.wvui-button")).click(); // Clica na Lupa
         //assertEquals("Ovo de Páscoa – Wikipédia, a enciclopédia livre", driver.getTitle()); // Validar o Titulo da Pagina
         assertTrue(driver.getTitle().contains("Ovo de Páscoa"));
     }
